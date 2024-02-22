@@ -5,8 +5,8 @@ public:
     {
         string str1;
         string str2;
-        for(auto i : word1)str1 += i;
-        for(auto i : word2)str2 += i;
+        for(int i = 0; i < word1.size(); i++)str1 += word1[i];
+        for(int i = 0; i < word2.size(); i++)str2 += word2[i];
         return (str1 == str2);
     }
 };
