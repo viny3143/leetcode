@@ -5,8 +5,8 @@ public:
     {
         string str1;
         string str2;
-        for (const auto& i : word1)str1.append(i);
-        for (const auto& i : word2)str2.append(i);
+        for(auto i : word1)str1 += i;
+        for(auto i : word2)str2 += i;
         if(str1 == str2)return true;
         return false;
     }
