@@ -11,10 +11,7 @@ public:
         if(sum == cnt)return -1;
         int cnt_1 = 0;
         int val=sum-cnt;
-        for(int i=0; i<trust.size(); i++)
-        {
-                if(val == trust[i][1])cnt_1++;
-        }
+        for(int i=0; i<trust.size(); i++)if(val == trust[i][1])cnt_1++;
         if(cnt_1 == n-1)return val;
         return -1;
     }
