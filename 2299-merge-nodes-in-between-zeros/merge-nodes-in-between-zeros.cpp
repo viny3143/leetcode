@@ -12,41 +12,44 @@ class Solution {
 public:
     ListNode* mergeNodes(ListNode* head)
     {
-        // ListNode* temp = head;
-        // ListNode* res = temp;
-        // head = head->next;
-        // int sum = 0;
-        // while(head != nullptr)
+        ListNode* temp = head;
+        ListNode* res = temp;
+        head = head->next;
+        int sum = 0;
+        while(head != nullptr)
+        {
+            if(head->val == 0)
+            {
+                temp->next->val = sum;
+                temp = temp->next;
+                temp->next = head->next;
+                head = head->next;
+                sum = 0;
+            }
+            else
+            {
+                sum += head->val;
+                head = head->next;
+        }
+    }
+    
+        return res->next;;
+        // ListNode *temp = head;
+        // temp=temp->next;
+        // head=head->next;
+        // while(head)
         // {
-        //     if(head->val == 0)
+        //     if(head->next->val == 0)
         //     {
-        //         temp->next = sum;
-        //         temp->next = 0;
+        //         head->next = head->next->next;
         //         head = head->next;
-        //         sum = 0;
         //     }
-        //     else
+        //     else 
         //     {
-        //         sum += head->data;
-        //         head = head->next;
+        //         head->val += head->next->val;
+        //         head->next = head->next->next;
         //     }
         // }
-        ListNode *temp = head;
-        temp=temp->next;
-        head=head->next;
-        while(head)
-        {
-            if(head->next->val == 0)
-            {
-                head->next = head->next->next;
-                head = head->next;
-            }
-            else 
-            {
-                head->val += head->next->val;
-                head->next = head->next->next;
-            }
-        }
-        return temp; 
+        // return temp; 
     }
 };
