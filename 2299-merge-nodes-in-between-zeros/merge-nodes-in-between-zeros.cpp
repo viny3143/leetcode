@@ -10,7 +10,27 @@
  */
 class Solution {
 public:
-    ListNode* mergeNodes(ListNode* head) {
+    ListNode* mergeNodes(ListNode* head)
+    {
+        // ListNode* temp = head;
+        // ListNode* res = temp;
+        // head = head->next;
+        // int sum = 0;
+        // while(head != nullptr)
+        // {
+        //     if(head->val == 0)
+        //     {
+        //         temp->next = sum;
+        //         temp->next = 0;
+        //         head = head->next;
+        //         sum = 0;
+        //     }
+        //     else
+        //     {
+        //         sum += head->data;
+        //         head = head->next;
+        //     }
+        // }
         ListNode *temp = head;
         temp=temp->next;
         head=head->next;
@@ -27,6 +47,6 @@ public:
                 head->next = head->next->next;
             }
         }
-        return temp;  
+        return temp; 
     }
 };
