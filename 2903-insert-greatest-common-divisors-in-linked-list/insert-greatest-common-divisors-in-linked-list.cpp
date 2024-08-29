@@ -8,7 +8,7 @@ public:
     ListNode* insertGreatestCommonDivisors(ListNode* head) {
         ListNode* temp = head;
 
-        while (temp != nullptr && temp->next != nullptr) {
+        while (temp->next != nullptr) {
             int first_num = temp->val;
             int second_num = temp->next->val;
             int num = gcd(first_num, second_num);
