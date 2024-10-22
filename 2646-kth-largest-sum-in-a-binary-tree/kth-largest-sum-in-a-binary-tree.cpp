@@ -36,15 +36,16 @@ public:
         sort(ans.begin(),ans.end());
         long long i=ans.size();
         if(k>ans.size()) return -1;
-        while(1){
-            if(k==0){
-                return ans[i];
-            }
-            else{
-                k--;
-                i--;
-            }
-        }
-        return -1;
+        return ans[i - k];
+        // while(1){
+        //     if(k==0){
+        //         return ans[i];
+        //     }
+        //     else{
+        //         k--;
+        //         i--;
+        //     }
+        // }
+        // return -1;
     }
 };
